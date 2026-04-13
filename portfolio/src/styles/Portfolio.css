@@ -1,0 +1,25 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 5px solid var(--secondary);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.discipline-tag {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--secondary);
+  font-weight: bold;
+}
