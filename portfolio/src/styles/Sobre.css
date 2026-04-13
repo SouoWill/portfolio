@@ -1,96 +1,125 @@
-.sobre-layout {
-  display: flex;
-  gap: 40px;
-  background: white;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  margin-top: 20px;
+.sobre-pagina {
+  max-width: 900px !important;
+  margin: 60px auto !important;
 }
 
-.sobre-sidebar {
-  flex: 1;
+.page-title-grande {
   text-align: center;
-  border-right: 1px solid #eee;
-  padding-right: 40px;
-}
-
-.foto-placeholder {
-  width: 120px;
-  height: 120px;
-  background: var(--primary, #001f3f);
-  color: white;
-  font-size: 2.5rem;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin: 0 auto 20px;
-}
-
-.cargo {
-  color: #666;
-  font-style: italic;
-  margin-bottom: 20px;
-}
-
-.info-lista {
-  list-style: none;
-  padding: 0;
-  text-align: left;
-  font-size: 0.9rem;
-}
-
-.info-lista li {
-  margin-bottom: 10px;
-}
-
-.sobre-main {
-  flex: 2;
-}
-
-.sobre-secao {
-  margin-bottom: 30px;
-}
-
-.sobre-secao h2 {
   color: var(--primary, #001f3f);
-  border-bottom: 2px solid var(--secondary, #d32f2f);
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  border-bottom: 3px solid var(--secondary, #d32f2f);
   display: inline-block;
-  margin-bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  padding-bottom: 10px;
 }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+.sobre-layout-textual {
+  display: flex;
+  gap: 50px;
+  background: white;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.03);
 }
 
-.skill-item {
-  background: #f0f2f5;
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  border-left: 3px solid var(--primary, #001f3f);
+.sobre-info-rapida {
+  flex: 1;
+  border-right: 1px solid #eee;
+  padding-right: 50px;
 }
 
-.timeline-item h4 {
+.cabecalho-perfil {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.iniciais-discretas {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #aaa;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.sobre-info-rapida h3 {
+  font-size: 1.8rem;
   margin: 0;
   color: #333;
 }
 
-/* Responsividade para celular */
+.cargo {
+  color: #777;
+  font-size: 0.95rem;
+  margin-top: 5px;
+}
+
+.divisor {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+.info-lista-limpa {
+  list-style: none;
+  padding: 0;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.sobre-conteudo {
+  flex: 2;
+}
+
+.sobre-secao {
+  margin-bottom: 35px;
+}
+
+.sobre-secao h2 {
+  color: var(--primary, #001f3f);
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.sobre-secao p {
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Skills organizadas como 'Tags' */
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag-skill {
+  background: #f0f4f8;
+  color: var(--primary, #001f3f);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid #d1d9e0;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
-  .sobre-layout {
+  .sobre-layout-textual {
     flex-direction: column;
-    padding: 20px;
+    padding: 30px;
   }
-  .sobre-sidebar {
+  .sobre-info-rapida {
     border-right: none;
     border-bottom: 1px solid #eee;
     padding-right: 0;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  .skills-tags {
+    justify-content: center;
   }
 }

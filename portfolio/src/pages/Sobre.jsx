@@ -2,52 +2,57 @@ import '../styles/Sobre.css';
 
 export default function Sobre() {
   return (
-    <div className="container">
-      <div className="sobre-layout">
+    <div className="container sobre-pagina">
+      {/* Título Principal da Página */}
+      <h1 className="page-title-grande">Sobre Mim</h1>
+
+      <div className="sobre-layout-textual">
         
-        {/* Lado Esquerdo: Perfil Rápido */}
-        <aside className="sobre-sidebar">
-          <div className="perfil-foto">
-            {/* Se tiver uma foto, coloque na pasta public e mude o src aqui */}
-            <div className="foto-placeholder">JW</div>
+        {/* lado esquerdo */}
+        <aside className="sobre-info-rapida">
+          <div className="cabecalho-perfil">
+            <span className="iniciais-discretas">JW</span>
+            <h3>Juan William</h3>
+            <p className="cargo">Estudante de Sistemas de Informação</p>
           </div>
-          <h3>Juan Wilque</h3>
-          <p className="cargo">Estudante de SI</p>
-          <hr />
-          <ul className="info-lista">
+          <hr className="divisor" />
+          <ul className="info-lista-limpa">
             <li><strong>📍 Local:</strong> Recife, PE</li>
             <li><strong>🎓 Instituição:</strong> UFPE (CIn)</li>
-            <li><strong>💻 Foco:</strong> Python & Web</li>
+            <li><strong>💻 Foco:</strong> Back-end & Desenvolvimento Web</li>
+            <li><strong>📧 Contato:</strong> <a href="mailto:jwsb@cin.ufpe.br" target= '_blank'>jwsb@cin.ufpe.br</a></li>
           </ul>
         </aside>
 
-        {/* Lado Direito: Texto e Trajetória */}
-        <main className="sobre-main">
+        {/* Lado Direito */}
+        <main className="sobre-conteudo">
           <section className="sobre-secao">
             <h2>Minha Trajetória</h2>
             <p>
-              Atualmente curso o 2º período de <strong>Sistemas de Informação</strong> no Centro de Informática da UFPE. 
-              Minha jornada na tecnologia começou com a curiosidade em entender como sistemas complexos são construídos, 
-              o que me levou a mergulhar no ecossistema de desenvolvimento de software.
+              Atualmente cursando <a href="https://portal.cin.ufpe.br/graduacao/sistemas-de-informacao/"><strong>Sistemas de Informação</strong></a> no Centro de Informática da UFPE. 
+              Minha jornada na tecnologia começou em 2023 com a curiosidade em entender como sistemas complexos são construídos. Essa paixão me levou a explorar o desenvolvimento de software, focando tanto na infraestrutura quanto na experiência do usuário.
             </p>
           </section>
 
           <section className="sobre-secao">
             <h2>Habilidades & Tecnologias</h2>
-            <div className="skills-grid">
-              <div className="skill-item">Python (Pygame & Logic)</div>
-              <div className="skill-item">React.js</div>
-              <div className="skill-item">Hardware (HDL)</div>
-              <div className="skill-item">UX/UI Design (Figma)</div>
+            <div className="skills-tags">
+              <span className="tag-skill">Python (Logic & Pygame)</span>
+              <span className="tag-skill">React.js</span>
+              <span className='tag-skill'>JavaScript</span>
+              <span className="tag-skill">Git & GitHub</span>
+              <span className="tag-skill">UX/UI</span>
+              <span className="tag-skill">HTML & CSS</span>
+              <span className="tag-skill">Lógica de Programação</span>
             </div>
           </section>
 
           <section className="sobre-secao">
-            <h2>Educação</h2>
-            <div className="timeline-item">
-              <h4>Bacharelado em Sistemas de Informação</h4>
-              <p>Centro de Informática - UFPE | 2025 - Presente</p>
-            </div>
+            <h2>Objetivos Atuais</h2>
+            <p>
+              Busco aprofundar meus conhecimentos em arquitetura de software e design de interação, 
+              aplicando os conceitos aprendidos no CIn em projetos práticos e inovadores.
+            </p>
           </section>
         </main>
 

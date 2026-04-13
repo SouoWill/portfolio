@@ -3,22 +3,28 @@ import Home from './pages/Home';
 import Sobre from './pages/Sobre';
 import Portfolio from './pages/Portfolio';
 import './styles/Global.css'; 
+import Footer from './components/Footer';
 
 function App() {
   return (
     <Router>
-      <nav style={{ background: '#001f3f', padding: '10px', display: 'flex', gap: '20px' }}>
-        <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>Início</Link>
-        <Link to="/sobre" style={{ color: 'white', textDecoration: 'none' }}>Sobre</Link>
-        <Link to="/portfolio" style={{ color: 'white', textDecoration: 'none' }}>Portfólio</Link>
-      </nav>
+      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        
+        <nav style={{ background: '#001f3f', padding: '15px', display: 'flex', gap: '20px', justifyContent: 'center' }}>
+          <Link to="/" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>Início</Link>
+          <Link to="/sobre" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>Sobre</Link>
+          <Link to="/portfolio" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>Portfólio</Link>
+        </nav>
 
-      <div style={{ padding: '20px' }}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/sobre" element={<Sobre />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-        </Routes>
+        <main style={{ flex: '1', padding: '20px' }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/sobre" element={<Sobre />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+          </Routes>
+        </main>
+
+        <Footer />
       </div>
     </Router>
   );
